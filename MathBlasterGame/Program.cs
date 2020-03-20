@@ -1,4 +1,5 @@
 ﻿using System;
+using Calculator;
 
 namespace MathBlasterGame
 {
@@ -6,7 +7,8 @@ namespace MathBlasterGame
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+           var operators = new Operators();
+            Console.WriteLine(operators.GetOperator());
         }
     }
 }

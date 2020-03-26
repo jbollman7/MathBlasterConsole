@@ -6,20 +6,58 @@ namespace CalculatorTests
     public class OperatorTests
     {
 
-        public enum TestOperatorsList
+        //simplue unit test suite to test choice enum
+        [Test]
+        public void AEnumTest()
         {
-            Addition,
-            Subtraction,
-            Multiplication,
-            Division
+            Assert.AreEqual(0, (int)ChoiceList.A);
         }
-    
-
-
-    [Test]
-        public void GetOperatorTest()
+        [Test]
+        public void BEnumTest()
         {
-           // Assert.That(TestOperatorsList.Addition, Is.TypeOf();
+            Assert.AreEqual(1, (int)ChoiceList.B);
+        }
+        [Test]
+        public void CEnumTest()
+        {
+            Assert.AreEqual(2, (int)ChoiceList.C);
+        }
+        [Test]
+        public void DEnumTest()
+        {
+            Assert.AreEqual(3, (int)ChoiceList.D);
+        }
+        [Test]
+        public void EEnumTest()
+        {
+            Assert.AreEqual(4, (int)ChoiceList.E);
+        }
+        [Test]
+        public void FEnumTest()
+        {
+            Assert.AreEqual(5, (int)ChoiceList.F);
+        }
+
+        // simple unit test suite to test OperatorsList enum
+        [Test]
+        public void AdditionEnumIntTest()
+        {
+            Assert.AreEqual(0, (int)OperatorsList.Addition);
+        }
+        [Test]
+        public void SubtractionEnumIntTest()
+        {
+            Assert.AreEqual(1, (int)OperatorsList.Subtraction);
+        }
+        [Test]
+        public void MultiplicationEnumIntTest()
+        {
+            Assert.AreEqual(2, (int)OperatorsList.Multiplication);
+        }
+        [Test]
+        public void DivisionEnumIntTest()
+        {
+            Assert.AreEqual(3, (int)OperatorsList.Division);
         }
 
 

@@ -7,22 +7,47 @@ namespace MathBlasterGame
     {
         static void Main(string[] args)
         {
-            //TestingDebugMethod();
+            //ConsoleKeyInfo keyInfo = Console.ReadKey();
+            while (true)
+            {
+                //TestingDebugMethod();
            
-            var gl = new GameConsoleUI();
-            var operators = new Operators();
+                var gl = new GameConsoleUI();
+                var operators = new Operators();
+                
             
-            operators.GetOperands();
-            
-            Console.WriteLine($"X has been set to {operators.OperandX}");
-            Console.WriteLine($"Y has been set to {operators.OperandY}");
-            Console.WriteLine($"{operators.Operator}");
-            Console.WriteLine($"Answer is {operators.ExpressionSolution}");
+                operators.GetOperands();
 
-            gl.WelcomeMessage();
-            gl.DisplayExpression(operators.OperandX, operators.OperandY, operators.Operator);
-            gl.DisplayOptions(operators.Shuffle(operators.ChoiceGenerator()));
+
+                gl.WelcomeMessage();
+                gl.DisplayExpression(1, operators.OperandX, operators.OperandY, operators.Operator);
+                var shuffledUpChoices = operators.Shuffle(operators.ChoiceGenerator());
+                // Proving that shuffleupchoices will consistently display items in same order. shuffledUpChoices.ForEach(Console.WriteLine);
             
+            
+                gl.DisplayOptions(shuffledUpChoices);
+                
+                //call game logic, readkey to stop
+                var userschoice = Console.ReadKey();
+                var glc = new GameLogicConsole(operators.ExpressionSolution, shuffledUpChoices);
+                glc.ProcessUserChoice(userschoice);
+
+                Console.WriteLine("Press Enter for next problem");
+                var nextProblem = Console.ReadKey();
+                if (nextProblem.Key == ConsoleKey.Enter)
+                {
+                    continue;
+                }
+
+                else if (nextProblem.Key == ConsoleKey.Escape)
+                {
+                    break;
+                }
+
+            }
+            
+
+
         }
         static public void TestingDebugMethod()
         {

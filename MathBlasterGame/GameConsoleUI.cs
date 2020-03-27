@@ -26,7 +26,7 @@ namespace MathBlasterGame
         }
 
         
-        public void DisplayExpression(int operandx, int operandy, OperatorsList operatorParam)
+        public void DisplayExpression(int problemNumber, int operandx, int operandy, OperatorsList operatorParam)
         {
             switch (operatorParam)
             {
@@ -46,22 +46,26 @@ namespace MathBlasterGame
                     ConsoleUiOperator = "/";
                     break;
             }
-            Console.WriteLine($"The Expression is {operandx} {ConsoleUiOperator} {operandy}");
+            Console.WriteLine($"Problem {problemNumber}:  {operandx} {ConsoleUiOperator} {operandy}");
             Console.WriteLine(" ");
             Console.WriteLine(" ");
         }
 
         public void DisplayOptions(List<int> possibleChoices)
         {
-
-
-             Console.Write($"A) {possibleChoices[0]}");
+            Console.Write($"A) {possibleChoices[0]}");
             Console.Write($"\t \t B) {possibleChoices[1]}");
             Console.WriteLine($"\t \t C) {possibleChoices[2]}");
             Console.WriteLine(" ");
             Console.Write($"D) {possibleChoices[3]}");
             Console.Write($"\t \t E) {possibleChoices[4]}");
             Console.Write($"\t \t F)  {possibleChoices[5]}");
+            Console.WriteLine(" ");
+            Console.WriteLine(" ");
+            Console.WriteLine(" ");
+            Console.WriteLine("Press 'Esc' to Quit");
         }
+
+        
     }
 }

@@ -31,7 +31,6 @@ namespace MathBlasterGame
                         WrongAnswer();
                         return ConsoleKey.Escape;
                     }
-                    break;
                 case ConsoleKey.B:
                     if (ConsoleKey.B == CorrectKey)
                     {
@@ -44,7 +43,7 @@ namespace MathBlasterGame
                         WrongAnswer();
                         return ConsoleKey.Escape;
                     }
-                    break;
+                    
                 case ConsoleKey.C:
                     if (ConsoleKey.C == CorrectKey)
                     {
@@ -57,7 +56,7 @@ namespace MathBlasterGame
                         WrongAnswer();
                         return ConsoleKey.Escape;
                     }
-                    break;
+                    
                 case ConsoleKey.D:
                     if (ConsoleKey.D == CorrectKey)
                     {
@@ -70,7 +69,7 @@ namespace MathBlasterGame
                         WrongAnswer();
                         return ConsoleKey.Escape;
                     }
-                    break;
+                    
                 case ConsoleKey.E:
                     if (ConsoleKey.E == CorrectKey)
                     {
@@ -83,7 +82,7 @@ namespace MathBlasterGame
                         WrongAnswer();
                         return ConsoleKey.Escape;
                     }
-                    break;
+                    
                 case ConsoleKey.F:
                     if (ConsoleKey.F == CorrectKey)
                     {
@@ -96,19 +95,19 @@ namespace MathBlasterGame
                         WrongAnswer();
                         return ConsoleKey.Escape;
                     }
-                    break;
+                    
                 case ConsoleKey.Escape:
                     return ConsoleKey.Escape;
-                    break;
+                   
                 
                 case ConsoleKey.Enter:
                     return ConsoleKey.Enter;
-                    break;
+                    
                 
                 default:
                     Console.WriteLine("Choices are A-F, Esc, and Enter. Please try again.");
                     return ConsoleKey.Enter;
-                    break;
+                    
             }
             
         }

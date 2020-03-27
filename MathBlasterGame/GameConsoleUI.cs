@@ -7,15 +7,15 @@ namespace MathBlasterGame
 
 
 
-    public class GameConsoleUI
+    public class GameConsoleUi
     {
         public string ConsoleUiOperator { get; private set; }
-        public GameConsoleUI()
+        public GameConsoleUi()
         {
            // var calc = new Operators();
         }
 
-        public const int _numberOfChoices = 6;
+        public const int NumberOfChoices = 6;
         public static void WelcomeMessage()
         {
             Console.WriteLine("Welcome to Math Blaster!");

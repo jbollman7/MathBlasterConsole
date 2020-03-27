@@ -7,14 +7,14 @@ namespace MathBlasterGame
     {
         static void Main(string[] args)
         {
-            GameConsoleUI.WelcomeMessage();
+            GameConsoleUi.WelcomeMessage();
            
             ConsoleKeyInfo keyInfo = Console.ReadKey();
             var problemNumber = 1;
             while (keyInfo.Key != ConsoleKey.Escape)
             {
                 //TestingDebugMethod();
-                var gl = new GameConsoleUI();
+                var gl = new GameConsoleUi();
                 var operators = new Operators();
 
                 operators.GetOperands();

@@ -33,9 +33,9 @@ namespace Calculator
 
         public void GetOperands()
         {
-            var OperatorSelection = GetOperator();
+            var operatorSelection = GetOperator();
             
-            switch (OperatorSelection)
+            switch (operatorSelection)
             {
                 case OperatorsList.Addition:
                     AdditionOperandRange();

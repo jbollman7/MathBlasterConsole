@@ -38,17 +38,6 @@ namespace MathBlasterGame
                 Console.WriteLine("Press Enter for next problem. Escape to quit.");
                 problemNumber++;
                 keyInfo = Console.ReadKey();
-                var nextProblem = Console.ReadKey();
-                if (nextProblem.Key == ConsoleKey.Enter)
-                {
-                    continue;
-                }
-
-                else if (nextProblem.Key == ConsoleKey.Escape)
-                {
-                    break;
-                }
-
             }
             
 

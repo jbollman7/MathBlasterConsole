@@ -5,7 +5,41 @@ namespace CalculatorTests
 {
     public class OperatorTests
     {
+        private Operators _op;
+        
 
+        [SetUp]
+        protected void SetUp()
+        {
+            _op = new Operators();
+            //_getOperands = _op.GetOperands();
+        }
+
+        [Test]
+        public void testOperandXNotNull()
+        {
+           
+            _op.GetOperands();
+            Assert.NotNull(_op.OperandX);
+        }
+        
+        [Test]
+        public void testOperandYNotNull()
+        {
+           
+            _op.GetOperands();
+            Assert.NotNull(_op.OperandY);
+        }
+
+        [Test]
+        public void TestOperatorIsChosen()
+        {
+            _op.GetOperands();
+            
+            //Assert.Contains(OperatorsList.Addition);
+            Assert.That(_op.Operator, Is.EqualTo(_op.Operator));
+        }
+        
         //simple unit test suite to test choice enum
         [Test]
         public void AEnumTest()

@@ -115,13 +115,15 @@ namespace Calculator
         }
         public List<int> ChoiceGenerator()
         {
-            var choices = new List<int>();
-            choices.Add(ExpressionSolution + 2);
-            choices.Add(ExpressionSolution);
-            choices.Add(ExpressionSolution + 3);
-            choices.Add(ExpressionSolution - 1);
-            choices.Add(ExpressionSolution - 2);
-            choices.Add(ExpressionSolution + 1);
+            var choices = new List<int>
+            {
+                ExpressionSolution + 2,
+                ExpressionSolution,
+                ExpressionSolution + 3,
+                ExpressionSolution - 1,
+                ExpressionSolution - 2,
+                ExpressionSolution + 1
+            };
             return choices;
         }
         public List<T> Shuffle<T> (List<T> list)

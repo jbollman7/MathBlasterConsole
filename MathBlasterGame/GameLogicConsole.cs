@@ -114,8 +114,8 @@ namespace MathBlasterGame
 
         private void CorrectKeyToExpressionAnswer(int expressionAnswer, IReadOnlyList<int> expressionChoices)
         {
-            int canidateAnswer = 0;
-            for (int option = 0; option < expressionChoices.Count; option++)
+            var canidateAnswer = 0;
+            for (var option = 0; option < expressionChoices.Count; option++)
             {
                 canidateAnswer = expressionChoices[option];
                 if (canidateAnswer == expressionAnswer)

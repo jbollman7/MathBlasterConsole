@@ -39,9 +39,7 @@ namespace MathBlasterGame
                 problemNumber++;
                 keyInfo = Console.ReadKey();
             }
-            
-
-
+            System.GC.Collect();
         }
         static public void TestingDebugMethod()
         {

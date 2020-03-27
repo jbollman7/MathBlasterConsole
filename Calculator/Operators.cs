@@ -51,7 +51,7 @@ namespace Calculator
                     break;
                 case OperatorsList.Division:
                     DivisionOperandRange();
-                    while (!(IsItAInt()))
+                    while (!IsItAInt())
                     {
                         DivisionOperandRange();
                     }

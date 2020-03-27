@@ -16,13 +16,14 @@ namespace MathBlasterGame
         }
 
         public const int _numberOfChoices = 6;
-        public void WelcomeMessage()
+        public static void WelcomeMessage()
         {
             Console.WriteLine("Welcome to Math Blaster!");
             Console.WriteLine(" ");
             Console.WriteLine(" ");
             Console.WriteLine(" ");
             Console.WriteLine(" ");
+            Console.WriteLine("Press Enter to begin, Esc to quit");
         }
 
         
@@ -60,10 +61,7 @@ namespace MathBlasterGame
             Console.Write($"D) {possibleChoices[3]}");
             Console.Write($"\t \t E) {possibleChoices[4]}");
             Console.Write($"\t \t F)  {possibleChoices[5]}");
-            Console.WriteLine(" ");
-            Console.WriteLine(" ");
-            Console.WriteLine(" ");
-            Console.WriteLine("Press 'Esc' to Quit");
+
         }
 
         

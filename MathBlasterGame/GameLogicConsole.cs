@@ -13,7 +13,7 @@ namespace MathBlasterGame
             CorrectKeyToExpressionAnswer(expressionAnswer, expressionChoices);
         }
        
-        public  void ProcessUserChoice(ConsoleKeyInfo userchoice )
+        public  ConsoleKey ProcessUserChoice(ConsoleKeyInfo userchoice )
         {
             var input = userchoice;
             
@@ -23,76 +23,91 @@ namespace MathBlasterGame
                     if (ConsoleKey.A == CorrectKey)
                     {
                         CorrectAnswer();
+                        return ConsoleKey.Enter;
                     }
 
                     else   
                     {
                         WrongAnswer();
+                        return ConsoleKey.Escape;
                     }
                     break;
                 case ConsoleKey.B:
                     if (ConsoleKey.B == CorrectKey)
                     {
                         CorrectAnswer();
+                        return ConsoleKey.Enter;
                     }
 
                     else   
                     {
                         WrongAnswer();
+                        return ConsoleKey.Escape;
                     }
                     break;
                 case ConsoleKey.C:
                     if (ConsoleKey.C == CorrectKey)
                     {
                         CorrectAnswer();
+                        return ConsoleKey.Enter;
                     }
 
                     else   
                     {
                         WrongAnswer();
+                        return ConsoleKey.Escape;
                     }
                     break;
                 case ConsoleKey.D:
                     if (ConsoleKey.D == CorrectKey)
                     {
                         CorrectAnswer();
+                        return ConsoleKey.Enter;
                     }
 
                     else   
                     {
                         WrongAnswer();
+                        return ConsoleKey.Escape;
                     }
                     break;
                 case ConsoleKey.E:
                     if (ConsoleKey.E == CorrectKey)
                     {
                         CorrectAnswer();
+                        return ConsoleKey.Enter;
                     }
 
                     else   
                     {
                         WrongAnswer();
+                        return ConsoleKey.Escape;
                     }
                     break;
                 case ConsoleKey.F:
                     if (ConsoleKey.F == CorrectKey)
                     {
                         CorrectAnswer();
+                        return ConsoleKey.Enter;
                     }
 
                     else   
                     {
                         WrongAnswer();
+                        return ConsoleKey.Escape;
                     }
                     break;
                 case ConsoleKey.Escape:
+                    return ConsoleKey.Escape;
                     break;
                 
                 case ConsoleKey.Enter:
+                    return ConsoleKey.Enter;
                     break;
                 
                 default:
                     Console.WriteLine("Choices are A-F, Esc, and Enter. Please try again.");
+                    return ConsoleKey.Enter;
                     break;
             }
             
@@ -140,11 +155,13 @@ namespace MathBlasterGame
         {
             Console.WriteLine(" ");
             Console.WriteLine("Correct Answer, good job");
+           
         }
-        public static void WrongAnswer()
+        public void WrongAnswer()
         {
             Console.WriteLine(" ");
             Console.WriteLine("Wrong Answer, sorry");
+            
         }
 
 

@@ -7,20 +7,22 @@ namespace MathBlasterGame
     {
         static void Main(string[] args)
         {
-            //ConsoleKeyInfo keyInfo = Console.ReadKey();
-            while (true)
+            GameConsoleUI.WelcomeMessage();
+           
+            ConsoleKeyInfo keyInfo = Console.ReadKey();
+            var problemNumber = 1;
+            while (keyInfo.Key != ConsoleKey.Escape)
             {
                 //TestingDebugMethod();
-           
                 var gl = new GameConsoleUI();
                 var operators = new Operators();
-                
-            
+
                 operators.GetOperands();
 
 
-                gl.WelcomeMessage();
-                gl.DisplayExpression(1, operators.OperandX, operators.OperandY, operators.Operator);
+               
+
+                gl.DisplayExpression(problemNumber, operators.OperandX, operators.OperandY, operators.Operator);
                 var shuffledUpChoices = operators.Shuffle(operators.ChoiceGenerator());
                 // Proving that shuffleupchoices will consistently display items in same order. shuffledUpChoices.ForEach(Console.WriteLine);
             
@@ -30,9 +32,12 @@ namespace MathBlasterGame
                 //call game logic, readkey to stop
                 var userschoice = Console.ReadKey();
                 var glc = new GameLogicConsole(operators.ExpressionSolution, shuffledUpChoices);
-                glc.ProcessUserChoice(userschoice);
-
-                Console.WriteLine("Press Enter for next problem");
+                ConsoleKey thing = glc.ProcessUserChoice(userschoice);
+                
+                Console.WriteLine(" ");
+                Console.WriteLine("Press Enter for next problem. Escape to quit.");
+                problemNumber++;
+                keyInfo = Console.ReadKey();
                 var nextProblem = Console.ReadKey();
                 if (nextProblem.Key == ConsoleKey.Enter)
                 {

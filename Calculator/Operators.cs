@@ -126,11 +126,11 @@ namespace Calculator
         }
         public List<T> Shuffle<T> (List<T> list)
         {
-            Random rnd = new Random();
-            for (int i = 0; i < list.Count; i++)
+            var rnd = new Random();
+            for (var i = 0; i < list.Count; i++)
             {
-                int k = rnd.Next(0, i);
-                T value = list[k];
+                var k = rnd.Next(0, i);
+                var value = list[k];
                 list[k] = list[i];
                 list[i] = value;
             }

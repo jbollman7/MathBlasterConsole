@@ -6,7 +6,7 @@ namespace CalculatorTests
     public class OperatorTests
     {
 
-        //simplue unit test suite to test choice enum
+        //simple unit test suite to test choice enum
         [Test]
         public void AEnumTest()
         {

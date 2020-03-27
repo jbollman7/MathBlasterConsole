@@ -24,7 +24,7 @@ namespace MathBlasterGame
 
                 gl.DisplayExpression(problemNumber, operators.OperandX, operators.OperandY, operators.Operator);
                 var shuffledUpChoices = operators.Shuffle(operators.ChoiceGenerator());
-                // Proving that shuffleupchoices will consistently display items in same order. shuffledUpChoices.ForEach(Console.WriteLine);
+                // Proving that 'shuffle up choices' method will consistently display items in same order. shuffledUpChoices.ForEach(Console.WriteLine);
             
             
                 gl.DisplayOptions(shuffledUpChoices);
